@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Copy Listener",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "description": "Listens for copy events and logs copied text to the console.",
+    "icons": {
+        "48": "icon48.png"
+    }
+}

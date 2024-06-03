@@ -3,13 +3,18 @@
     "name": "Copy Listener",
     "version": "1.0",
     "permissions": ["activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
             "js": ["contentScript.js"]
         }
     ],
-    "description": "Listens for copy events and logs copied text to the console.",
+    "action": {
+        "default_popup": "popup.html"
+    },
     "icons": {
         "48": "icon48.png"
     }

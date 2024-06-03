@@ -2,14 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Copied Text</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormPal</title>
     <style>
-        body { width: 200px; padding: 10px; }
-        #copiedText { word-wrap: break-word; }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #5a67d8; /* Indigo shade */
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 16px;
+            color: #4a5568; /* Gray shade */
+            margin: 10px 0 5px;
+        }
+        p {
+            font-size: 14px;
+            margin: 5px 0;
+            white-space: pre-wrap; /* Ensures whitespace and newlines are preserved */
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .container {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            width: 200px;
+        }
     </style>
 </head>
 <body>
-    <div id="copiedText">Nothing copied yet!</div>
+    <div class="container">
+        <h1>FormPal</h1>
+        <h2>Copied Text</h2>
+        <p id="copiedText">--</p>
+        <h2>Response</h2>
+        <p id="responseText">Getting response...</p>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>
